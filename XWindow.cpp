@@ -1,6 +1,5 @@
 
-// This program creates a basic X window application using Xlib.
-#include <iostream> // preparedness for C++ later (not used in this program)
+// This program uses Xlib to create a basic x-window.
 #include <stdio.h> // printf()
 #include <stdlib.h> // exit()
 #include <memory.h> // memset()
@@ -9,9 +8,6 @@
 #include <X11/Xutil.h> // for visual and related api
 #include <X11/XKBlib.h> // for XkbKeycodeToKeysym()
 #include <X11/keysym.h> // for keyboard symbols
-
-//namespaces
-using namespace std; //preparedness for C++ later (not used in this program)
 
 Display *gpDisplay = NULL; // 'Display' is a struct which will be used for communication with X-server. (This var will be mapped with the instance of Display on the server).
 
@@ -95,8 +91,8 @@ int main(void) // Note:- command line parameters can be used to give i/p address
 		
 
 	}
-
-	return (0); // This statement is never executed. The program exits from case 33 (written above).
+	uninitialize();
+	return (0); 
 }
 
 void createWindow(void){
