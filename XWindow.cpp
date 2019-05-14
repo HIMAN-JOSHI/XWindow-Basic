@@ -1,5 +1,5 @@
 
-// This program uses Xlib to create a basic x-window.
+// This program creates a basic X window application using Xlib.
 #include <iostream> // preparedness for C++ later (not used in this program)
 #include <stdio.h> // printf()
 #include <stdlib.h> // exit()
